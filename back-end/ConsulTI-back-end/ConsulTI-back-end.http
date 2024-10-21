@@ -1,0 +1,6 @@
+@ConsulTI_back_end_HostAddress = http://localhost:5064
+
+GET {{ConsulTI_back_end_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,12 @@
+.principal{
+    background-color: white;
+    color: black;
+    min-height: 91.5vh;
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    min-width: 80vw;
+}
+

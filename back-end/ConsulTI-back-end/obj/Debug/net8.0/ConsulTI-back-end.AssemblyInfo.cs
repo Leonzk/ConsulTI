@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConsulTI-back-end")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d815e8bc1f8436dbdf08c155248b4b9d1f2474ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b5e01d0fe54a973cdd5848ca1610e0d4cd89073")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConsulTI-back-end")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConsulTI-back-end")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

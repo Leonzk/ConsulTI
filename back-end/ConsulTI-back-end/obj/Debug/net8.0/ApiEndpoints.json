@@ -2,7 +2,7 @@
   {
     "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
     "Method": "Criar",
-    "RelativePath": "api/Empresa",
+    "RelativePath": "api/empresa",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
     "Method": "ObterTodos",
-    "RelativePath": "api/Empresa",
+    "RelativePath": "api/empresa",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
     "Method": "Obter",
-    "RelativePath": "api/Empresa/{id}",
+    "RelativePath": "api/empresa/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
     "Method": "AtualizarEmpresa",
-    "RelativePath": "api/Empresa/{id}",
+    "RelativePath": "api/empresa/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -65,8 +65,45 @@
   {
     "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
     "Method": "DeletarEmpresa",
-    "RelativePath": "api/Empresa/{id}",
+    "RelativePath": "api/empresa/{id}",
     "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
+    "Method": "AtualizarEmpresaCORS",
+    "RelativePath": "api/empresa/atualizar/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modificado",
+        "Type": "ConsulTI_back_end.ViewModel.EmpresaModificarViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.EmpresaController",
+    "Method": "DeletarEmpresaCORS",
+    "RelativePath": "api/empresa/delete/{id}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -181,6 +218,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "AtualizarSetorCORS",
+    "RelativePath": "api/setor/atualizar/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modificado",
+        "Type": "ConsulTI_back_end.ViewModel.SetorModificarViewModel",
+        "IsRequired": true
+      },
       {
         "Name": "id",
         "Type": "System.Int32",

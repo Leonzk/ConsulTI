@@ -99,6 +99,38 @@ namespace ConsulTI_back_end.Controllers
             }
         }
 
+        [HttpPost("atualizar/{id}")]
+        public IActionResult AtualizarSetorCORS([FromBody] SetorModificarViewModel modificado, int id)
+        {
+
+            try //CORS não estava deixando eu realizar a operação de PUT, por isso criei um post para atualizar
+            {
+                var setor = _setorServices.Obter(id);
+                if (setor == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    if (modificado.descricao != "") { setor.descricao = modificado.descricao; } //if Ternário
+                    var sucesso = _setorServices.Atualizar(setor);
+                    if (sucesso)
+                    {
+                        return Ok(new { setor, modified = true });
+                    }
+                    else
+                    {
+                        return StatusCode(StatusCodes.Status500InternalServerError);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpDelete("{id}")]
         public IActionResult DeletarSetor(int id)
         {

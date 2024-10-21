@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsulTI_back_end.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/empresa")]
     [ApiController]
     public class EmpresaController : ControllerBase
     {
@@ -61,7 +61,7 @@ namespace ConsulTI_back_end.Controllers
         [HttpGet]
         public IActionResult ObterTodos()
         {
-            var empresas = (Empresa)_empresaServices.ObterTodos();
+            var empresas = _empresaServices.ObterTodos();
             if (empresas == null)
             {
                 return UnprocessableEntity();
@@ -106,6 +106,42 @@ namespace ConsulTI_back_end.Controllers
             }
         }
 
+        [HttpPost("atualizar/{id}")]
+        public IActionResult AtualizarEmpresaCORS([FromBody] EmpresaModificarViewModel modificado, int id)
+        {
+            try //CORS não estava deixando eu realizar a operação de PUT, por isso criei um post para atualizar
+            {
+                var empresa = _empresaServices.Obter(id);
+                if (empresa == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    if (modificado.nome_fantasia != "") { empresa.nome_fantasia = modificado.nome_fantasia; } //if Ternário
+                    if (modificado.razao_social != "") { empresa.razao_social = modificado.razao_social; }
+                    if (modificado.cnpj != "") { empresa.cnpj = modificado.cnpj; }
+
+                    var sucesso = _empresaServices.Atualizar(empresa);
+                    if (sucesso)
+                    {
+                        return Ok(new { empresa, modified = true });
+                    }
+                    else
+                    {
+                        return StatusCode(StatusCodes.Status500InternalServerError);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
+
         [HttpDelete("{id}")]
         public IActionResult DeletarEmpresa(int id)
         {
@@ -132,6 +168,34 @@ namespace ConsulTI_back_end.Controllers
                 return BadRequest(ex.Message);
             }
         }
-    
+
+        [HttpPost("/api/empresa/delete/{id}")]
+        public IActionResult DeletarEmpresaCORS(int id)
+        {
+            //No front end ele não possibilita chamar um método DELETE, mesmo com o CORS habilitado, mas com um método post por exemplo ele deixa... 
+            try
+            {
+                var empresa = _empresaServices.Obter(id);
+                var sucesso = _empresaServices.Deletar(id);
+                if (sucesso)
+                {
+                    return Ok(new
+                    {
+                        empresa,
+                        deleted = true
+                    });
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

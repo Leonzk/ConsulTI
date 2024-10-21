@@ -7,6 +7,6 @@
         public string ?nome_fantasia { get; set; }
         public string cnpj {  get; set; }
 
-        public ICollection<Setor> setores { get; set; }
+        public virtual ICollection<EmpresaSetor> setores { get; set; }
     }
 }

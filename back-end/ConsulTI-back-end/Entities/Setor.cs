@@ -5,6 +5,6 @@
         public int id { get; set; }
         public string descricao { get; set; }
 
-        public ICollection<Empresa> empresas { get; set; }
+        public virtual ICollection<EmpresaSetor> empresas { get; set; }
     }
 }

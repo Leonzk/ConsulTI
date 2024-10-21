@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsulTI_back_end.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/setor")]
     [ApiController]
     public class SetorController : ControllerBase
     {
@@ -45,7 +45,11 @@ namespace ConsulTI_back_end.Controllers
             }
             else
             {
-                return Ok(setor);
+                return Ok(new
+                {
+                    id = setor.id,
+                    descricao = setor.descricao
+                });
             }
         }
 

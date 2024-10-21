@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped(typeof(ConsulTI_back_end.Services.EmpresaServices));
 builder.Services.AddScoped(typeof(ConsulTI_back_end.Services.SetorServices));
-
+builder.Services.AddScoped(typeof(ConsulTI_back_end.Services.EmpresaSetorServices));
 builder.Services.AddSingleton<ConsulTI_back_end.BD>(new ConsulTI_back_end.BD());
 
 var app = builder.Build();

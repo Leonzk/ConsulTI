@@ -10,6 +10,7 @@ namespace ConsulTI_back_end.Controllers
     public class EmpresaController : ControllerBase
     {
         private readonly Services.EmpresaServices _empresaServices;
+
         
         public EmpresaController(Services.EmpresaServices empresaServices)
         {
@@ -41,22 +42,26 @@ namespace ConsulTI_back_end.Controllers
         public IActionResult Obter(int id)
         {
             var empresa = _empresaServices.Obter(id);
-
             if (empresa==null)
             {
                 return NotFound();
             }
             else
             {
-                return Ok(empresa);
+                return Ok(new
+                {
+                    id = empresa.id,
+                    razao_social = empresa.razao_social,
+                    nome_fantasia = empresa.nome_fantasia,
+                    cnpj = empresa.cnpj,   
+                });
             }
         }
 
         [HttpGet]
         public IActionResult ObterTodos()
         {
-            var empresas = _empresaServices.ObterTodos();
-
+            var empresas = (Empresa)_empresaServices.ObterTodos();
             if (empresas == null)
             {
                 return UnprocessableEntity();

@@ -56,7 +56,10 @@ namespace ConsulTI_back_end.Services
 
             cmd.CommandText = $@"select * from Empresa";
 
-            conn.Open();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
 
             MySqlDataReader dr = cmd.ExecuteReader();
             List<Empresa> empresas = new List<Empresa>();
@@ -89,7 +92,11 @@ namespace ConsulTI_back_end.Services
                                  where id = @id";
 
             cmd.Parameters.AddWithValue("@id", id);
-            conn.Open();
+
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
 
             MySqlDataReader dr = cmd.ExecuteReader();
             Empresa? empresa = null;
@@ -104,8 +111,70 @@ namespace ConsulTI_back_end.Services
                 };
             }
             conn.Close();
-
             return empresa;
+        }
+
+        public bool Atualizar(Entities.Empresa empresa)
+        {
+            bool sucesso = false;
+            var conexao = _bd.CriarConexao();
+
+            MySqlCommand cmd = conexao.CreateCommand();
+
+            cmd.CommandText = $@"UPDATE Empresa SET id = @id, nome_fantasia = @nome_fantasia, razao_social = @razao_social, cnpj = @cnpj WHERE (id = @id)";
+
+            cmd.Parameters.AddWithValue("@id", empresa.id);
+            cmd.Parameters.AddWithValue("@nome_fantasia", empresa.nome_fantasia);
+            cmd.Parameters.AddWithValue("@razao_social", empresa.razao_social);
+            cmd.Parameters.AddWithValue("@cnpj", empresa.cnpj);
+
+            try
+            {
+                if (conexao.State != System.Data.ConnectionState.Open)
+                    conexao.Open();
+                int qtdeLinhasAfetadas = cmd.ExecuteNonQuery();
+                sucesso = true;
+            }
+            catch (Exception ex)
+            {   
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return sucesso;
+        }
+
+        public bool Deletar(int id)
+        {
+
+            bool sucesso = false;
+            var conexao = _bd.CriarConexao();
+
+            MySqlCommand cmd = conexao.CreateCommand();
+
+            cmd.CommandText = $@"DELETE FROM Empresa WHERE id = {id}";
+
+            try
+            {
+                if (conexao.State != System.Data.ConnectionState.Open)
+                {
+                    conexao.Open();
+                }
+                int qtdeLinhasAfetadas = cmd.ExecuteNonQuery();
+                sucesso = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return sucesso;
         }
 
     }

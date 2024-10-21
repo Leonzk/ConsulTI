@@ -49,3 +49,4 @@ C:\Users\leobo\Trabalhos_Git\ConsulTI\back-end\ConsulTI-back-end\obj\Debug\net8.
 C:\Users\leobo\Trabalhos_Git\ConsulTI\back-end\ConsulTI-back-end\obj\Debug\net8.0\ConsulTI-back-end.pdb
 C:\Users\leobo\Trabalhos_Git\ConsulTI\back-end\ConsulTI-back-end\obj\Debug\net8.0\ConsulTI-back-end.genruntimeconfig.cache
 C:\Users\leobo\Trabalhos_Git\ConsulTI\back-end\ConsulTI-back-end\obj\Debug\net8.0\ref\ConsulTI-back-end.dll
+C:\Users\leobo\Trabalhos_Git\ConsulTI\back-end\ConsulTI-back-end\obj\Debug\net8.0\ConsulTI-back-end.sourcelink.json

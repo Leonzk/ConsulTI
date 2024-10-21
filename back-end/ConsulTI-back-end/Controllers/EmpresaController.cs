@@ -44,11 +44,11 @@ namespace ConsulTI_back_end.Controllers
 
             if (empresa==null)
             {
-                return UnprocessableEntity();
+                return NotFound();
             }
             else
             {
-                return Ok();
+                return Ok(empresa);
             }
         }
 
@@ -66,5 +66,67 @@ namespace ConsulTI_back_end.Controllers
                 return Ok(empresas);
             }
         }
+
+        [HttpPut("{id}")]
+        public IActionResult AtualizarEmpresa([FromBody]EmpresaModificarViewModel modificado ,int id)
+        {
+            try
+            {
+                var empresa = _empresaServices.Obter(id);
+                if(empresa == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    if (modificado.nome_fantasia != "") { empresa.nome_fantasia = modificado.nome_fantasia; } //if Ternário
+                    if (modificado.razao_social != "") { empresa.razao_social = modificado.razao_social; }
+                    if (modificado.cnpj != "") { empresa.cnpj = modificado.cnpj; }
+
+                    var sucesso = _empresaServices.Atualizar(empresa);
+                    if (sucesso)
+                    {
+                        return Ok(new { empresa, modified = true });
+                    }
+                    else
+                    {
+                        return StatusCode(StatusCodes.Status500InternalServerError);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeletarEmpresa(int id)
+        {
+            try
+            {
+                var empresa = _empresaServices.Obter(id);
+                var sucesso = _empresaServices.Deletar(id);
+                if (sucesso)
+                {
+                    return Ok(new
+                    {
+                        empresa,
+                        deleted = true
+                    });
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+    
     }
 }

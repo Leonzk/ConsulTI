@@ -16,8 +16,8 @@ namespace ConsulTI_back_end.Services
 
             MySqlCommand cmd = conexao.CreateCommand();
 
-            cmd.CommandText = $@"INSERT INTO Setor (descicao)
-                                    VALUES(@descicao)";
+            cmd.CommandText = $@"INSERT INTO Setor (descricao)
+                                    VALUES(@descricao)";
 
             cmd.Parameters.AddWithValue("@descricao", setor.descricao);
 

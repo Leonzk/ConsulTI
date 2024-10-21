@@ -79,6 +79,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "Criar",
+    "RelativePath": "api/Setor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "setorVM",
+        "Type": "ConsulTI_back_end.ViewModel.SetorCriarViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "ObterTodos",
+    "RelativePath": "api/Setor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "Obter",
+    "RelativePath": "api/Setor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "AtualizarSetor",
+    "RelativePath": "api/Setor/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "modificado",
+        "Type": "ConsulTI_back_end.ViewModel.SetorModificarViewModel",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ConsulTI_back_end.Controllers.SetorController",
+    "Method": "DeletarSetor",
+    "RelativePath": "api/Setor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ConsulTI_back_end.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

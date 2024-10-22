@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|c:\\users\\leobo\\trabalhos_git\\consulti\\back-end\\consulti-back-end\\services\\empresaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|solutionrelative:services\\empresaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|c:\\users\\leobo\\trabalhos_git\\consulti\\back-end\\consulti-back-end\\controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|solutionrelative:controllers\\setorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|c:\\users\\leobo\\trabalhos_git\\consulti\\back-end\\consulti-back-end\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|c:\\users\\leobo\\trabalhos_git\\consulti\\back-end\\consulti-back-end\\services\\empresaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|solutionrelative:services\\empresaservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF0330CD-B791-4018-98F5-3697E572C73D}|ConsulTI-back-end.csproj|c:\\users\\leobo\\trabalhos_git\\consulti\\back-end\\consulti-back-end\\entities\\setor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -106,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EmpresaController.cs",
               "DocumentMoniker": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Controllers\\EmpresaController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmpresaController.cs",
@@ -114,8 +114,7 @@
               "RelativeToolTip": "Controllers\\EmpresaController.cs",
               "ViewState": "AQIAACEAAAAAAAAAAAAUwGwAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T02:59:19.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T02:59:19.294Z"
             },
             {
               "$type": "Document",
@@ -143,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -151,12 +150,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T01:45:31.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T01:45:31.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SetorController.cs",
               "DocumentMoniker": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Controllers\\SetorController.cs",
               "RelativeDocumentMoniker": "Controllers\\SetorController.cs",
@@ -169,20 +167,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "EmpresaServices.cs",
               "DocumentMoniker": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Services\\EmpresaServices.cs",
               "RelativeDocumentMoniker": "Services\\EmpresaServices.cs",
               "ToolTip": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Services\\EmpresaServices.cs",
               "RelativeToolTip": "Services\\EmpresaServices.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAADwv3IAAAAJAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAwDwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-21T02:17:17.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmpresaSetorController.cs",
               "DocumentMoniker": "C:\\Users\\leobo\\Trabalhos_Git\\ConsulTI\\back-end\\ConsulTI-back-end\\Controllers\\EmpresaSetorController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmpresaSetorController.cs",
@@ -190,8 +188,7 @@
               "RelativeToolTip": "Controllers\\EmpresaSetorController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T11:31:14.084Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T11:31:14.084Z"
             },
             {
               "$type": "Document",

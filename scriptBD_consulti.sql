@@ -63,3 +63,32 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("Casas Bahia", "Ponto Frio", "34.815.947/0001-72");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("B2W", "Americanas", "04.464.701/0001-32");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("Arthur Lundgren Tecidos S/A", "Casas Pernambucanas", "78.230.449/0001-33");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("MAGAZINE LUIZA SA", "MAGAZINE LUIZA", "47.960.950/0001-21");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("Arcos Dourados Comércio de Alimentos Ltda", "McDonald's	", "49.510.837/0001-70");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("Companhia de Bebidas das Américas", "Ambev", "95.300.044/0001-43");
+INSERT INTO mydb.empresa (razao_social, nome_fantasia, cnpj) values ("Petróleo Brasileiro S.A.", "Petrobras", "99.841.474/0001-23");
+
+INSERT INTO mydb.setor (descricao) values ("Recursos Humanos");
+INSERT INTO mydb.setor (descricao) values ("Administração");
+INSERT INTO mydb.setor (descricao) values ("Financeiro");
+INSERT INTO mydb.setor (descricao) values ("Logística");
+INSERT INTO mydb.setor (descricao) values ("Produção");
+INSERT INTO mydb.setor (descricao) values ("Contábil");
+INSERT INTO mydb.setor (descricao) values ("Marketing");
+INSERT INTO mydb.setor (descricao) values ("Tecnologia da informação");
+
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (1,1);
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (1,2);
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (1,3);
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (1,4);
+
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (2,1);
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (2,3);
+
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (3,2);
+INSERT INTO mydb.empresa_has_setor(empresa_id, setor_id) values (3,1);
+
